@@ -8,11 +8,13 @@ if "page" not in st.session_state:
 placeholder = st.empty()
 if st.session_state.page == 0:
     with placeholder.container():
-        st.write("Click on Home to Log in")
+        st.write("You are logged out.You can  close the Tab")
+        st.write("If you want to login again Click on Home to Log in")
         
         
 
-elif st.session_state.page > 0:    
+elif st.session_state.page > 0: 
+    st.session_state.page =1
     with placeholder.container():
         st.title(":blue[GPP TREKKERS]")
         url="tkList.csv"
