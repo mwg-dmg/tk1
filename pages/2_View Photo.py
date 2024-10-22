@@ -62,12 +62,18 @@ def view_next_photo():
                     st.button("Prev Photo",on_click=view_pre_photo,disabled=(j==0))                    
                 with col2:                    
                     st.button("Next Photo",on_click=view_next_photo,disabled=(st.session_state.nflag==1))                
-                if file.endswith("mp4"):
-                    video_file=open(file,"rb")
-                    video_bytes=video_file.read()
-                    st.video(video_bytes)
-                else:                
-                    st.image(file)
+                if file.endswith("mp4"):        
+                    try:
+                        video_file=open(file,"rb")
+                        video_bytes=video_file.read()                    
+                        st.video(video_bytes)
+                    except:
+                        st.write("Error in opening photo, please click on Next or Previous button")
+                else:
+                    try:
+                        st.image(file)
+                    except:
+                        st.write("Error in opening photo, please click on Next or Previous button")
                 st.write(st.session_state.text)
                 st.button("Back to Main Page",on_click=mainpage,disabled=(st.session_state.page ==1))      
 
@@ -93,11 +99,17 @@ def view_pre_photo():
                     st.button("Next Photo",on_click=view_next_photo,disabled=(st.session_state.nflag==1))
                 
                 if file.endswith("mp4"):
-                    video_file=open(file,"rb")
-                    video_bytes=video_file.read()
-                    st.video(video_bytes)
-                else:                
-                    st.image(file)
+                    try:
+                        video_file=open(file,"rb")
+                        video_bytes=video_file.read()                    
+                        st.video(video_bytes)
+                    except:
+                        st.write("Error in opening photo, please click on Next or Previous button")
+                else:
+                    try:
+                        st.image(file)
+                    except:
+                        st.write("Error in opening photo, please click on Next or Previous button")
                 st.write(st.session_state.text)
                 st.button("Back to Main Page",on_click=mainpage,disabled=(st.session_state.page ==1))
                 
@@ -105,7 +117,7 @@ def view_photo():
     st.title(":blue[GPP TREKKERS]") 
     placeholder = st.empty()
     
-    st.session_state.status ="Opened"
+    st.session_state.status =1
     with placeholder.container():
                 i_in=st.session_state.page-2
                 
@@ -121,11 +133,17 @@ def view_photo():
                     st.button("Next Photo",on_click=view_next_photo,disabled=(st.session_state.nflag==1))
                 
                 if file.endswith("mp4"):
-                    video_file=open(file,"rb")
-                    video_bytes=video_file.read()
-                    st.video(video_bytes)
-                else:                
-                    st.image(file)
+                    try:
+                        video_file=open(file,"rb")
+                        video_bytes=video_file.read()                    
+                        st.video(video_bytes)
+                    except:
+                        st.write("Error in opening photo, please click on Next or Previous button")
+                else:
+                    try:
+                        st.image(file)
+                    except:
+                        st.write("Error in opening photo, please click on Next or Previous button")
                 st.write(st.session_state.text)
                 st.button("Back to Main Page",on_click=mainpage,disabled=(st.session_state.page ==1))
 def Tn1():
@@ -215,7 +233,7 @@ placeholder = st.empty()
 if st.session_state.page == 0:
     with placeholder.container():
         st.write("Click on Home to Log in")
-
+        st.write("If you want to login again Click on Home to Log in")
 elif st.session_state.page > 0:    
     with placeholder.container():
         if (st.session_state.page == 1):
