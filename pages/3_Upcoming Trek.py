@@ -11,9 +11,7 @@ def Lout():
 
 
 
-#Lout()
-#st.write("You are logged out.You can  close the Tab")
-#st.write("If you want to login again Click on Home to Log in")
+
 st.title(":green[Upcomming Trek]")
 st.title(":blue[Pawankhind,  Manoli Lake]")
 
