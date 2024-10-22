@@ -6,7 +6,7 @@ url="tkphoto.csv"
 df=pd.read_csv(url)
 
 if "page" not in st.session_state:
-    st.session_state.page = 0
+    st.session_state.page = 1
 if "page" not in st.session_state:
     st.session_state.page = 0
 if "j" not in st.session_state:
