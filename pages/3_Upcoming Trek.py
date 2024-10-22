@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 st.set_page_config(page_title="MWG",page_icon="&",layout="centered",initial_sidebar_state="auto",menu_items=None)
 if "page" not in st.session_state:
-    st.session_state.page = 0
+    st.session_state.page = 1
 
 
 def Lout():
@@ -11,8 +11,9 @@ def Lout():
 
 
 
-Lout()
-st.write("You are logged out.You can  close the Tab")
-st.write("If you want to login again Click on Home to Log in")
-
+#Lout()
+#st.write("You are logged out.You can  close the Tab")
+#st.write("If you want to login again Click on Home to Log in")
+st.title(":green[Upcomming Trek]")
+st.title(":blue[Pawankhind,  Manoli Lake]")
 
