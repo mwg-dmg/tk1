@@ -263,7 +263,7 @@ elif st.session_state.page > 0:
                 st.button('17)Rohida Fort- 30 Oct 2022',on_click=Tn17)
                 st.button('18)K2S-  5 Mar 2023',on_click=Tn18)
                 st.button('19)Lingya Ghat- 17 Jul 2023',on_click=Tn19)                
-                st.button('20)Hathi Matha',on_click=Tn20)
+                st.button('20)Hathi Matha-14 Dec 2024',on_click=Tn20)
                 st.button('21)Video of all Treks',on_click=Tn21)
                 
 
